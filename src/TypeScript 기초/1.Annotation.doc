@@ -1,0 +1,10 @@
+개발환경 구성
+    - TypeScript 개발 환경 구성을 위한 필수 모듈은 typescript.js 입니다.
+    - node 설치를 기본 전제로 npm(혹은 yarn)을 이ㅛㅇ한  typescript를 설치하면 tsc를 이용해 *.ts 파일에 대한 컴파일이 가능합니다. (ts-node를 설치하면 컴파일과 실행을 한번에 수행할 수  있습니다.)
+    - TypeScript로 작성한 *.ts 파일은 tsc 컴파일 과정을 거치면 *.js 파일로 트랜스컴파일(transcompile)됩니다.
+    - 개발을 위한 IDE는 Viusal Studio Code, IntelliJ 등 다양하며 선택해 설치합니다.
+
+   > npm install -g typescript ts-node
+        -g : 전역 설치
+        typescript : TypeScript
+        ts-node : ts-node 설치
