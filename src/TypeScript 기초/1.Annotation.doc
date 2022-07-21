@@ -8,3 +8,18 @@
         -g : 전역 설치
         typescript : TypeScript
         ts-node : ts-node 설치
+
+    - 기본적인 프로젝트의 구성 디렉토리는 src, build로 구분하여 작성 소스(*.ts)와 컴파일된 소스(*.js)를 구분합니다.
+    - 디렉토리를 구분해서 소스 파일들을 관리하기 위해 tsconfig.json 파일을 생성하고 관련 내용을 수정합니다.
+    - package.json 파일을 생성하고 nodemon과 concurrently 모듈을 설치합니다.
+    - package.json 파일에 scripts 내용을 추가하여 빌드(build)와 실행(run) 명령을 스크립트로 실행되도록 설정합니다.
+
+    1. >tsc --init                                  tsconfig.json 파일 생성
+    2-1. "outDir" : "./build"                       tsconfig.json 수정 : out 디렉토리 지정
+    2-2. "rootDir" : "./src"                        tsconfig.json 수정 : root 디렉토리 지정
+    3. >npm init -y                                 package.json 파일 생성
+    4. >npm i nodemon concurrently                  nodemon과 concurrently 설치
+    5-1. "start : build":"tsc-w"                    package.json 수정 : build script 명령 추가
+    5-2. "start : run" : "nodemon build/index.js"   package.json 수정 : run script 명령 추가
+    5-3. "start" : "concurrently npm:start:"        package.json 수정 : 빌드와 실행 명령 추가
+    6. >npm start                                   start 스크립트 실행(tsc-watch모드)
