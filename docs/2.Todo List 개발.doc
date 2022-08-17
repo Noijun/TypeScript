@@ -1,0 +1,22 @@
+Todo List 개발 - Defining the Data Model
+    - Todo List 프로젝트에서 기본 데이터에 해당하는 TodoItem 클래스를 정의 합니다.
+    - 기본 JavaScript를 이용한 TodoItem과 TypeScript의 TodoItem 클래스의 차이를 확인합니다.
+
+    TodoTtem
+    id - number
+    tast - string
+    complete - boolean
+    printDetails() - void
+
+    Todo Data
+    [
+        { id: 1, tast: 'Buy Some Food', complete : true},
+        { id: 2, tast: 'To study TypeScript', complete : false},
+        { id: 3, tast: 'Call sister', complete : false}
+    ]
+
+    실행 결과
+    My Todo List
+    1 Buy Some Food (complete)
+    2 To study TypeScript
+    3 Call sister
