@@ -20,3 +20,16 @@ Todo List 개발 - Defining the Data Model
     1 Buy Some Food (complete)
     2 To study TypeScript
     3 Call sister
+
+Todo List 개발 - Todo List Collection
+    - TodoItem을 담는 TodoCollection 클래스를 정의합니다.
+    - TodoCollection 클래스는 task 추가, task 찾기, task완료의 기능을 갖습니다.
+    - TodoItem은 배열과 맵(Map)에 저장하는 방식 두 가지로 구현합니다.
+
+    TodoCollection
+    nextid - number
+    username - string
+    todoItems - TodoItem[]
+    addTodo(ask:string) - number
+    getTodoByid(id:number) - TodoItem
+    markComplete(id:number, complete: Boolean) - void
