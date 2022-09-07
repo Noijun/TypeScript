@@ -1,0 +1,20 @@
+type allas
+    - 새로운 타입을 정의하는 방법은 type alias와 interface를 정의하는 두 가지 방식이 있습니다.
+    - type alias를 이용하면 객체, 공용체(Union), 튜플(Tuple), 기본 타입에 타입의 별칭을 생성할 수 있습니다.
+    - type alias도 제네릭의 사용이 가능하며, 스스로 참조하는 것도 가능합니다.
+
+    tpe MyNumber = number;
+    const n : MyNumber = 10;
+
+    type Container<T> = { value : T };
+
+    type User = { name:string, age:number};;
+    const testUser : User = {name: 'Kim', age:20};
+
+    function printInfo( user : {name: string, age: number}){
+        console.log(`User Information - Name : ${user.name}, Age : #{user.age}`);
+    }
+
+    function printInfo(user : User){
+        console.log(`User Information - Name : ${user.name}, Age : #{user.age}`);
+    }
